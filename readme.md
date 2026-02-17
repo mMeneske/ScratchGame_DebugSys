@@ -45,6 +45,20 @@ First you will need to connnect Phaser, ScratchGame and DebugSyss.
 Debug Groups are gropus that can you can toggle they will only write debug info when toggled.
 
 ```js
+function create(){
+    //testDebug(everything, lightWarn, hardWarn, lightError) is the function for creating a new debug group none of the argumets are actually required but they are recomended. 
+    testDebug = initDebug();
+}
 
+function update(){
+    //You can always change the initial arguments for initDebug.
+    testDebug.everything = true;
+    testDebug.lightWarn = true;
+    testDebug.hardWarn = true;
+    testDebug.lightError = true;
 
+    //testDebug.log() works just as console.log() with the only exeption that it will only work if testDebug.everything == true.
+    testDebug.log();
+    //testDebug.lightWarn() is a warning that is not that important it 
+}
 ```
