@@ -59,6 +59,9 @@ function update(){
 
     //testDebug.log() works just as console.log() with the only exeption that it will only work if testDebug.everything == true.
     testDebug.log();
-    //testDebug.lightWarn() is a warning that is not that important it 
+    //testDebug.lightWarn() is a warning that is not that important, it can be toggled via testDebug.lightWarn.
+    testDebug.lightWarn();
+    //testDebug.hardWarn() is a warning that is importaint and is close to causing a bug, it can be toggled via testDebug.hardWarn.
+    testDebug.hardWarn();
 }
 ```
