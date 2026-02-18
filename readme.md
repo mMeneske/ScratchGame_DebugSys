@@ -30,7 +30,7 @@ npx http-server . -p 8080
 
 ## Connecting Libaries
 
-First you will need to connnect Phaser, ScratchGame and DebugSyss.
+First you will need to connnect Phaser, ScratchGame and DebugSys.
 
 ```html
 <head>
