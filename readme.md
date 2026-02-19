@@ -8,15 +8,23 @@ https://github.com/Mperv/scratch-game/blob/main/readme.en.md
 
 ## Downloading Libaries
 
+### Required libraries
+
 You can download Phaser 3 from:
 https://phaser.io/download/phaser3
 
 You can download ScratchGame from:
 https://github.com/Mperv/scratch-game
 
+### Recomended libaries
+
+VersionSys: automatically loads all libaries that it supports and lets them interact with eachother:
+https://github.com/mMeneske/ScratchGame_VersionSys
+
 ## Starting Server
 
 To run any game you need to run it on a server.
+
 
 For Python you can use:
 ```bash
@@ -37,6 +45,17 @@ First you will need to connnect Phaser, ScratchGame and DebugSys.
     <script src="lib/phaser.min.js"></script>
     <script src="lib/ScratchGame.js"></script>
     <script src="lib/DebugSys.js"></script>
+</head>
+```
+
+If you are using VersionSys this is will look like this:
+And DebugSys will be automatically loaded by VersionSys
+
+```html
+<head>
+    <script src="lib/phaser.min.js"></script>
+    <script src="lib/ScratchGame.js"></script>
+    <script src="lib/VersionSys.js"></script>
 </head>
 ```
 
@@ -73,5 +92,16 @@ function update(){
     testDebug.lightError();
     // testDebug.hardError() is an error that is catastrofical it is only meant to be used right
     // before a crash, since it will itslf crash the project. It can not be disabled.
+}
+```
+
+## Version
+
+```js
+function update(){
+    // debugSys.version will return the version of DebugSys.
+    console.log(debugSys.version);
+    // debugSys.versionId will return the id for the version of DebugSys.
+    console.log(debugSys.versionId);
 }
 ```
